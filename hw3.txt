@@ -1,0 +1,58 @@
+1. На локальном репозитории сделать ветки для:
+- Postman
+- Jmeter
+- CheckLists
+- Bag Reports
+- SQL
+- Charles
+- Mobile testing
+	git init
+	git add README.md
+	echo "# HW" >> README.md
+	git add README.md
+ 	git commit -m "add first file"
+	git branch -M main
+	git remote add origin https://github.com/kate98981/HW.git
+	git push -u origin main
+	git branch Postman
+	git branch Jmeter
+	git branch CheckLists
+	git branch Bag_Reports
+ 	git branch SQL
+	git branch Charles
+	git branch Mobile_testing
+
+2. Запушить все ветки на внешний репозиторий
+	git push --all
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+ 	git checkout Bag_Reports
+	touch bug_report.txt
+	(редактировала через блокнот, тк не люблю редактор на гите, ссори :) )
+4. Запушить структуру багрепорта на внешний репозиторий
+	git push --set-upstream origin Bag_Reports
+5. Вмержить ветку Bag Reports в Main
+	git checkout main
+	git merge Bag_Reports
+6. Запушить main на внешний репозиторий.
+	git push
+7. В ветке CheckLists набросать структуру чек листа.
+	(делала через блокнот)
+8. Запушить структуру на внешний репозиторий
+	git push --set-upstream origin CheckLists
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+	на github:
+	pull request->new pull requst->base:main compare:CheckLists 
+	-> Button click "create pull request"->button click create pull request
+-> Merge pull request->Confirm merge->Delete branch CheckLists
+10. Синхронизировать Внешнюю и Локальную ветки Main
+	git pull
+
+_______________
+Я неправильно назвала вначале ветку, поэтому вот как я исправила
+ 	git branch -m Bag_Reports Bug_Reports #переименовываем ветку локально
+ 	git push origin :Bag_Reports #удаляем старую ветку
+ 	git push --set-upstream origin Bug_Reports #пушим новую ветку 
+
+________________
+Вернула удаленную ветку
+git push --set-upstream origin CheckLists
